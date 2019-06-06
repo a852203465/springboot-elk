@@ -2,7 +2,7 @@ version: "2"
 
 services:
   elasticsearch:
-    image: registry.cn-shenzhen.aliyuncs.com/apply-workspace/elasticsearch:5.5.1
+    image: docker.io/elasticsearch:5.6.5
     container_name: elasticsearch
     hostname: elasticsearch
     environment:
@@ -16,7 +16,7 @@ services:
       - elk
 
   kibana:
-    image: registry.cn-shenzhen.aliyuncs.com/apply-workspace/kibana:5.5.1
+    image: docker.io/kibana:5.6.5
     container_name: kibana
     hostname: kibana
     environment:
@@ -29,7 +29,7 @@ services:
       - elk
 
   logstash:
-    image: registry.cn-shenzhen.aliyuncs.com/apply-workspace/logstash:5.5.1
+    image: docker.io/logstash:5.6.5
     container_name: logstash
     hostname: logstash
     depends_on:
