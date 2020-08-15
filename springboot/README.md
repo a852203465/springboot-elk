@@ -44,6 +44,8 @@
         <!-- logstash 输入地址  与logstash.conf 配置文件的input对应-->
         <!-- 我这里的logstash相对地址是192.168.10.128 端口是logstash.conf input配置的端口 -->
         <destination>192.168.20.3:4560</destination>
+        <!-- "appname":"longji-provider" 的作用是指定创建索引的名字时用，并且在生成的文档中会多了这个字段  -->
+        <customFields>{"appname":"longji-provider"}</customFields>
         <encoder charset="UTF-8" class="net.logstash.logback.encoder.LogstashEncoder" />
     </appender>
 
