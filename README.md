@@ -1,18 +1,24 @@
-1.  springboot 
+# springboot + elk 
+ - 将Spring boot 日志主动推送到Logstash
  
- springboot + elk 测试项目
+## ELK 搭建
+ - https://github.com/a852203465/elk-docker.git
+ 
+## 配置SpringBoot应用向Logstash输入日志
 
-2. 配置SpringBoot应用向Logstash输入日志
-
+```xml
 <dependency>
       <groupId>net.logstash.logback</groupId>
       <artifactId>logstash-logback-encoder</artifactId>
       <version>4.9</version>
 </dependency>
+```
 
-3. 在resource目录添加logback配置
+## 在resource目录添加logback配置
 
-3.1 第一种：
+### 第一种：
+ - 修改 remoteHost，port 标签值
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration debug="false" scan="false" scanPeriod="30 seconds" >
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
@@ -34,8 +40,11 @@
     </root>
 
 </configuration>
+```
 
-3.2 第二种：
+### 第二种：
+ - 修改 destination 标签值
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <include resource="org/springframework/boot/logging/logback/base.xml" />
@@ -55,14 +64,13 @@
     </root>
 
 </configuration>
+```
+    注意： 选择其中一种配置即可, 并修改xml中的destination
 
-注意： 选择其中一种配置即可
+## 启动项目
 
-4. 启动项目
-
-5. 登录 kibana
-
-浏览器 打开  ip:5601, 创建索引即可查询springboot 测试项目的日志
+## 登录 kibana
+    浏览器 打开  ip:5601, 创建索引即可查询springboot 测试项目的日志
 
 
 

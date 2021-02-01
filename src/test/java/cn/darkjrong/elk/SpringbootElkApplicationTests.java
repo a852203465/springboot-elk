@@ -1,4 +1,4 @@
-package com.unionman.elk;
+package cn.darkjrong.elk;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

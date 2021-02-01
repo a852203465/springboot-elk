@@ -8,7 +8,7 @@
         <version>2.1.5.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.unionman</groupId>
+    <groupId>cn.darkjrong</groupId>
     <artifactId>springboot-elk</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>springboot-elk</name>

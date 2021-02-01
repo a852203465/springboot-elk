@@ -3,8 +3,8 @@
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
     <appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
         <param name="Encoding" value="UTF-8"/>
-        <remoteHost>192.168.20.3</remoteHost>
-        <port>4560</port>
+        <remoteHost>192.168.178.128</remoteHost>
+        <port>5044</port>
         <!-- encoder is required -->
         <encoder class="net.logstash.logback.encoder.LogstashEncoder" />
     </appender>
